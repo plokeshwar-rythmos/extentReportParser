@@ -1,0 +1,3010 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/bee7a4abdc590e21eec8618a90c81ff4d16e500a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Customer Communication Service</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Nov 23, 2017 12:24:24 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.7</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fatal'><a href='#!'>Fatal <i class='material-icons red-text darken-3'>cancel</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='73.913%'><span class='strong'>17</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='26.087%'>6</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='44.282%'><span class='strong'>182</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='2.92%'>12</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='52.798%'>217</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS001 : Process a Flight delay with action code as OT and office code as DALWN09AA</span>
+						<span class='test-time'>Nov 23, 2017 12:26:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:26:33 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:27:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 55s+755ms</span>
+</div>
+	<div class='test-desc'>After processing a Flight delay XML with valid details from JMS viewer, Verify the success message status in Audit file and validate both input and output messages from Log Filesmessages </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:33 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:33 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>RNXEQM<br><b>Action Code : </b>OT<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:44 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:01 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:01 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:01 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>RNXEQM<br><b>ACTION CODE : </b>OT<br><b>CORRELATION ID : </b>1df86b8e-65af-40ed-9ce1-3f2e132500a1<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511420248066.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511420248144.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511420248159.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : RNXEQM] == Output : [ ID : RNXEQM]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ OFFPOINT : SNU] == Output : [ OFFPOINT : SNU]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>Input : [ PREVIOUSDEPARTURETIME : 1410] == Output : [ PREVIOUSDEPARTURETIME : 1410]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:28 PM</td>
+					<td class='step-details'>TCFS001 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS002 : Nuance Request Processor</span>
+						<span class='test-time'>Nov 23, 2017 12:27:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:27:29 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:29:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 31s+7ms</span>
+</div>
+	<div class='test-desc'>Validating the success message in .soap file after the Nuance Request Processor </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:29 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:29 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>HUJ92B<br><b>Action Code : </b>OT<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:35 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:52 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:52 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:52 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>HUJ92B<br><b>ACTION CODE : </b>OT<br><b>CORRELATION ID : </b>6fef1058-e24f-4f78-afff-2ae4c599bea5<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511420302667.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511420302667.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511420302682.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : HUJ92B] == Output : [ ID : HUJ92B]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ OFFPOINT : SNU] == Output : [ OFFPOINT : SNU]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Input : [ PREVIOUSDEPARTURETIME : 1410] == Output : [ PREVIOUSDEPARTURETIME : 1410]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : 6fef1058-e24f-4f78-afff-2ae4c599bea5</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:22 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:51 PM</td>
+					<td class='step-details'>Event Status for correlation ID 6fef1058-e24f-4f78-afff-2ae4c599bea5 is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:51 PM</td>
+					<td class='step-details'>Retrieving the Status Message from SOAP file :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:00 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id 6fef1058-e24f-4f78-afff-2ae4c599bea5</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:00 PM</td>
+					<td class='step-details'>Status Message for correlation ID 6fef1058-e24f-4f78-afff-2ae4c599bea5 is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:00 PM</td>
+					<td class='step-details'>TCFS002 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS003 : Verify Discard Status in AACC Request Adapter with Invalid Action Code</span>
+						<span class='test-time'>Nov 23, 2017 12:29:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:29:00 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:29:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+720ms</span>
+</div>
+	<div class='test-desc'>Process a Nuance Request with Invalid Action code 'XX' then verify the message status as DISCARD in Audit file </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:00 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:00 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>KRHWV5<br><b>Action Code : </b>XX<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:06 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:15 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:15 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:15 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>DISCARD<br><b>PNR : </b>KRHWV5<br><b>ACTION CODE : </b>XX<br><b>CORRELATION ID : </b>0f018c57-a9de-4f57-b78e-60f2f6e34ef6<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:15 PM</td>
+					<td class='step-details'>TCFS003 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS004 : Notification Response Adapter Input</span>
+						<span class='test-time'>Nov 23, 2017 12:29:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:29:15 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:31:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 6s+683ms</span>
+</div>
+	<div class='test-desc'>Validating the success message in DB after posting a message in Notification response Adapter Queue </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:15 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:15 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>ZAASZM<br><b>Action Code : </b>OT<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:21 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:28 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:28 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:28 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>ZAASZM<br><b>ACTION CODE : </b>OT<br><b>CORRELATION ID : </b>cbb38d56-e271-453b-bef2-d2ae468415c0<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511420380666.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511420380666.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511420380666.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : ZAASZM] == Output : [ ID : ZAASZM]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ OFFPOINT : SNU] == Output : [ OFFPOINT : SNU]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Input : [ PREVIOUSDEPARTURETIME : 1410] == Output : [ PREVIOUSDEPARTURETIME : 1410]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : cbb38d56-e271-453b-bef2-d2ae468415c0</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:40 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:30:11 PM</td>
+					<td class='step-details'>Event Status for correlation ID cbb38d56-e271-453b-bef2-d2ae468415c0 is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:11 PM</td>
+					<td class='step-details'>Retrieving the Status Message from SOAP file :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:19 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id cbb38d56-e271-453b-bef2-d2ae468415c0</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:30:19 PM</td>
+					<td class='step-details'>Status Message for correlation ID cbb38d56-e271-453b-bef2-d2ae468415c0 is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:19 PM</td>
+					<td class='step-details'><b style="font-size: 15px;color: black;"> Passing CorrelationID for AACC Response Adapter is : cbb38d56-e271-453b-bef2-d2ae468415c0 </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:19 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.RESP.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:28 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:30:36 PM</td>
+					<td class='step-details'>Audit file downloaded successfully for AACC Response Adapter</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:36 PM</td>
+					<td class='step-details'>Success message retrieved successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:36 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>MESSAGE STATUS : </b>SUCCESS<br><b>Vendor  : </b>NUANCE<br><b>CORRELATION ID : </b>cbb38d56-e271-453b-bef2-d2ae468415c0<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:36 PM</td>
+					<td class='step-details'>Retrieving Event Status From Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:31:22 PM</td>
+					<td class='step-details'>Event Status for correlation ID cbb38d56-e271-453b-bef2-d2ae468415c0 is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:31:22 PM</td>
+					<td class='step-details'>TCFS004 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS005 : Nuance Request Processor file Posting</span>
+						<span class='test-time'>Nov 23, 2017 12:31:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:31:22 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:32:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 49s+474ms</span>
+</div>
+	<div class='test-desc'>Validating the pending status in Db after posting file into Nuance Request Processor </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:22 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>Action Code : </b>PX<br><b>Responsible Office : </b>DALWN09AA<br><b>Correltion ID : </b>87eb88f4-831a-4bcc-9a1d-134atkerhvzf<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:22 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.NUANCE.REQ.PROC.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:31 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:31:39 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:39 PM</td>
+					<td class='step-details'>Success message retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:39 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>ACTION CODE : </b>FLIGHT_CANCEL<br><b>CORRELATION ID : </b>87eb88f4-831a-4bcc-9a1d-134atkerhvzf<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:39 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : 87eb88f4-831a-4bcc-9a1d-134atkerhvzf</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:39 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:11 PM</td>
+					<td class='step-details'>Event Status for correlation ID 87eb88f4-831a-4bcc-9a1d-134atkerhvzf is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:11 PM</td>
+					<td class='step-details'>TCFS005 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS006 : Vendor Responser Scheduler Timeout event status for Nuance</span>
+						<span class='test-time'>Nov 23, 2017 12:32:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:32:11 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:50:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 18m 45s+954ms</span>
+</div>
+	<div class='test-desc'>Validating the event status as Timeout if Nuance Responce processor does not send any response to the input </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:11 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:11 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>E13Y88<br><b>Action Code : </b>OT<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:17 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:34 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:34 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:34 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>E13Y88<br><b>ACTION CODE : </b>OT<br><b>CORRELATION ID : </b>2564f05a-4af5-4153-8b64-98892cec6f6f<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511420576283.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511420576283.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511420576283.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : E13Y88] == Output : [ ID : E13Y88]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ OFFPOINT : SNU] == Output : [ OFFPOINT : SNU]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>Input : [ PREVIOUSDEPARTURETIME : 1410] == Output : [ PREVIOUSDEPARTURETIME : 1410]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:56 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:05 PM</td>
+					<td class='step-details'>Event Status for correlation ID 2564f05a-4af5-4153-8b64-98892cec6f6f is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:15 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id 2564f05a-4af5-4153-8b64-98892cec6f6f</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:15 PM</td>
+					<td class='step-details'>Event Status for correlation ID 2564f05a-4af5-4153-8b64-98892cec6f6f is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:15 PM</td>
+					<td class='step-details'><b>Waiting for the session Timeout</b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:25 PM</td>
+					<td class='step-details'>Event INIT TM from DB is <b>2017-11-23 01:02:17.572</b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:47 PM</td>
+					<td class='step-details'>Event Status for correlation ID 2564f05a-4af5-4153-8b64-98892cec6f6f is  : <b style="font-size: 15px;color: green;"> TIMEOUT </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:57 PM</td>
+					<td class='step-details'>Event CPLN TM is  : <b style="font-size: 15px;color: green;"> 2017-11-23 01:20:01.028 </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:57 PM</td>
+					<td class='step-details'>Event Timeout completed with in default time  : <b style="font-size: 15px;color: green;"> 17 minutes </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:57 PM</td>
+					<td class='step-details'>TCFS006 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS007 : Nuance Request Processor file Posting with invalid details</span>
+						<span class='test-time'>Nov 23, 2017 12:50:57 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:50:57 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:51:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+646ms</span>
+</div>
+	<div class='test-desc'>Validating the pending status in Db after posting file into Nuance Request Processor </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:50:57 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>Action Code : </b>PX<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:50:57 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.NUANCE.REQ.PROC.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:05 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:13 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:13 PM</td>
+					<td class='step-details'>Error Information : PLAYBACK QUEUE</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:13 PM</td>
+					<td class='step-details'>Message moved to nuance request processor Error Queue</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:13 PM</td>
+					<td class='step-details'>Error information in audit file: PLAYBACK QUEUE MessageTransformationException/MessagingException/MessageHandlingException/SpelEvaluationException ID:ITEST_HGR1-EMS12105.49A05A0C67AB9FA3474C:20 4ms</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:13 PM</td>
+					<td class='step-details'>TCFS007 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS008 : Validate success message in DB, after processing a flight cancel request from AACC request adapter</span>
+						<span class='test-time'>Nov 23, 2017 12:51:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:51:13 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:53:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 56s+304ms</span>
+</div>
+	<div class='test-desc'>Drop a flight cancel xml from JMS viewer and validate Success message in AACC notification response adapter queue and validate Success message in DB </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:13 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:13 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>22WNFK<br><b>Action Code : </b>PX<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:19 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:37 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:37 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:37 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>22WNFK<br><b>ACTION CODE : </b>PX<br><b>CORRELATION ID : </b>780397e7-750d-41e5-bf57-867cf23349c5<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511421724493.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511421724493.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511421724493.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : 22WNFK] == Output : [ ID : 22WNFK]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : 780397e7-750d-41e5-bf57-867cf23349c5</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:04 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:35 PM</td>
+					<td class='step-details'>Event Status for correlation ID 780397e7-750d-41e5-bf57-867cf23349c5 is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:35 PM</td>
+					<td class='step-details'>Retrieving the Status Message from SOAP file :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:46 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id 780397e7-750d-41e5-bf57-867cf23349c5</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:46 PM</td>
+					<td class='step-details'>Status Message for correlation ID 780397e7-750d-41e5-bf57-867cf23349c5 is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:46 PM</td>
+					<td class='step-details'><b style="font-size: 15px;color: black;"> Passing CorrelationID for AACC Response Adapter is : 780397e7-750d-41e5-bf57-867cf23349c5 </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:46 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.RESP.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:52 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:00 PM</td>
+					<td class='step-details'>Audit file downloaded successfully for AACC Response Adapter</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:00 PM</td>
+					<td class='step-details'>Success message retrieved successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:00 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>MESSAGE STATUS : </b>SUCCESS<br><b>Vendor  : </b>NUANCE<br><b>CORRELATION ID : </b>780397e7-750d-41e5-bf57-867cf23349c5<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:00 PM</td>
+					<td class='step-details'>Retrieving Event Status From Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:09 PM</td>
+					<td class='step-details'>Event Status for correlation ID 780397e7-750d-41e5-bf57-867cf23349c5 is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:09 PM</td>
+					<td class='step-details'>TCFS008 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS009 : Nuance Request Processor file Posting and Validating Success status in DB</span>
+						<span class='test-time'>Nov 23, 2017 12:53:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:53:10 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:53:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 48s+925ms</span>
+</div>
+	<div class='test-desc'>Validating the Success status in Db after posting file into Nuance Request Processor </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:10 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>Action Code : </b>PX<br><b>Responsible Office : </b>DALWN09AA<br><b>Correltion ID : </b>87eb88f4-831a-4bcc-9a1d-vgusgenflimt<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:10 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.NUANCE.REQ.PROC.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:16 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:24 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:24 PM</td>
+					<td class='step-details'>Success message retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:24 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>ACTION CODE : </b>FLIGHT_CANCEL<br><b>CORRELATION ID : </b>87eb88f4-831a-4bcc-9a1d-vgusgenflimt<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:24 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : 87eb88f4-831a-4bcc-9a1d-vgusgenflimt</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:33 PM</td>
+					<td class='step-details'>Event Status for correlation ID 87eb88f4-831a-4bcc-9a1d-vgusgenflimt is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:33 PM</td>
+					<td class='step-details'>Passing CorrelationID for AACC Response Adapter is : 87eb88f4-831a-4bcc-9a1d-vgusgenflimt</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:33 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.RESP.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:39 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:49 PM</td>
+					<td class='step-details'>Audit file downloaded successfully for AACC Response Adapter</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:49 PM</td>
+					<td class='step-details'>Success message retrieved successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:49 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>MESSAGE STATUS : </b>SUCCESS<br><b>Vendor  : </b>NUANCE<br><b>CORRELATION ID : </b>87eb88f4-831a-4bcc-9a1d-vgusgenflimt<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:49 PM</td>
+					<td class='step-details'>Retrieving Event Status From Database</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:58 PM</td>
+					<td class='step-details'>Event Status for correlation ID 87eb88f4-831a-4bcc-9a1d-vgusgenflimt is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:58 PM</td>
+					<td class='step-details'>TCFS009 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS010 : Validate message details in AACC request adapter error queue after dropping a message with Invalid details in AACC request adapter</span>
+						<span class='test-time'>Nov 23, 2017 12:53:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:53:59 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:54:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+355ms</span>
+</div>
+	<div class='test-desc'>After processing a Flight delay XML with invalid details from JMS viewer, Verify the play back queue message status in Audit file </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:59 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:59 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>7UDJG6<br><b>Action Code : </b>BP<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:04 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:19 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:19 PM</td>
+					<td class='step-details'>Error Information : PLAYBACK QUEUE</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:19 PM</td>
+					<td class='step-details'>Message moved to nuance request processor Error Queue</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:19 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>PNR : </b>7UDJG6<br><b>ACTION CODE : </b>BP<br><b>CORRELATION ID : </b>6029743b-18ce-4eac-8fc0-fcd1853b93ca<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:19 PM</td>
+					<td class='step-details'>Error information in audit file: PLAYBACK QUEUE MessageHandlingException/CCSCommonValidation 7UDJG6/6029743b-18ce-4eac-8fc0-fcd1853b93ca/BP 13ms</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:19 PM</td>
+					<td class='step-details'>TCFS010 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS011 : Validate Failed message in DB, after processing a flight cancel request from AACC request adapter</span>
+						<span class='test-time'>Nov 23, 2017 12:54:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:54:19 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:56:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 56s+130ms</span>
+</div>
+	<div class='test-desc'>Drop a flight cancel xml from JMS viewer and validate Failed message in AACC notification response adapter queue and validate Failed message in DB </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:19 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:19 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>NRDJ1S<br><b>Action Code : </b>PX<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:26 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:35 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:35 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:35 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>NRDJ1S<br><b>ACTION CODE : </b>PX<br><b>CORRELATION ID : </b>b21fd80a-254a-4dfd-88a4-e8a77bc1683d<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:47 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:47 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511421887942.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:47 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511421887942.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:47 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511421887942.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:47 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : NRDJ1S] == Output : [ ID : NRDJ1S]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : b21fd80a-254a-4dfd-88a4-e8a77bc1683d</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:48 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:21 PM</td>
+					<td class='step-details'>Event Status for correlation ID b21fd80a-254a-4dfd-88a4-e8a77bc1683d is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:21 PM</td>
+					<td class='step-details'>Retrieving the Status Message from SOAP file :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:31 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id b21fd80a-254a-4dfd-88a4-e8a77bc1683d</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:31 PM</td>
+					<td class='step-details'>Status Message for correlation ID b21fd80a-254a-4dfd-88a4-e8a77bc1683d is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:31 PM</td>
+					<td class='step-details'><b style="font-size: 15px;color: black;"> Passing CorrelationID for AACC Response Adapter is : b21fd80a-254a-4dfd-88a4-e8a77bc1683d </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:31 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.RESP.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:36 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:45 PM</td>
+					<td class='step-details'>Audit file downloaded successfully for AACC Response Adapter</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:45 PM</td>
+					<td class='step-details'>Success message retrieved successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:45 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>MESSAGE STATUS : </b>FAILED<br><b>Vendor  : </b>NUANCE<br><b>CORRELATION ID : </b>b21fd80a-254a-4dfd-88a4-e8a77bc1683d<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:45 PM</td>
+					<td class='step-details'>Retrieving Event Status From Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:15 PM</td>
+					<td class='step-details'>Event Status for correlation ID b21fd80a-254a-4dfd-88a4-e8a77bc1683d is  : <b style="font-size: 15px;color: green;"> FAILED </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:15 PM</td>
+					<td class='step-details'>TCFS011 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS012 : Validate NOT_SENT message in DB, after processing a flight cancel request from AACC request adapter</span>
+						<span class='test-time'>Nov 23, 2017 12:56:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:56:15 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:57:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 28s+834ms</span>
+</div>
+	<div class='test-desc'>Drop a flight cancel xml from JMS viewer and validate NOT_SENT message in AACC notification response adapter queue and validate NOT_SENT message in DB </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:15 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:15 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>FJ81RH<br><b>Action Code : </b>PX<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:21 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:30 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:30 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:30 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>FJ81RH<br><b>ACTION CODE : </b>PX<br><b>CORRELATION ID : </b>3704f553-dfda-42cc-b722-983bcf40f103<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511422003088.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511422003088.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511422003088.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : FJ81RH] == Output : [ ID : FJ81RH]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : 3704f553-dfda-42cc-b722-983bcf40f103</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:43 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:10 PM</td>
+					<td class='step-details'>Event Status for correlation ID 3704f553-dfda-42cc-b722-983bcf40f103 is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:10 PM</td>
+					<td class='step-details'>Retrieving the Status Message from SOAP file :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:20 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id 3704f553-dfda-42cc-b722-983bcf40f103</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:20 PM</td>
+					<td class='step-details'>Status Message for correlation ID 3704f553-dfda-42cc-b722-983bcf40f103 is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:20 PM</td>
+					<td class='step-details'><b style="font-size: 15px;color: black;"> Passing CorrelationID for AACC Response Adapter is : 3704f553-dfda-42cc-b722-983bcf40f103 </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:20 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.RESP.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:25 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:34 PM</td>
+					<td class='step-details'>Audit file downloaded successfully for AACC Response Adapter</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:34 PM</td>
+					<td class='step-details'>Success message retrieved successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:34 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>MESSAGE STATUS : </b>NOT_SENT<br><b>Vendor  : </b>NUANCE<br><b>CORRELATION ID : </b>3704f553-dfda-42cc-b722-983bcf40f103<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:34 PM</td>
+					<td class='step-details'>Retrieving Event Status From Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:44 PM</td>
+					<td class='step-details'>Event Status for correlation ID 3704f553-dfda-42cc-b722-983bcf40f103 is  : <b style="font-size: 15px;color: green;"> NOT_SENT </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:44 PM</td>
+					<td class='step-details'>TCFS012 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS013 : Validate Failed message in DB, after processing a flight delay request from AACC request adapter</span>
+						<span class='test-time'>Nov 23, 2017 12:57:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:57:44 PM</span>
+	<span class='label end-time'>Nov 23, 2017 12:59:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 56s+315ms</span>
+</div>
+	<div class='test-desc'>Drop a flight delay xml from JMS viewer and validate Failed message in AACC notification response adapter queue and validate Failed message in DB </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:44 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:44 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>UM215Z<br><b>Action Code : </b>OT<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:51 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:59 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:59 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:59 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>UM215Z<br><b>ACTION CODE : </b>OT<br><b>CORRELATION ID : </b>aa2b7cca-848a-49d3-aa50-91c81bc79fb0<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511422096109.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511422096109.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511422096109.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : UM215Z] == Output : [ ID : UM215Z]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ OFFPOINT : SNU] == Output : [ OFFPOINT : SNU]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Input : [ PREVIOUSDEPARTURETIME : 1410] == Output : [ PREVIOUSDEPARTURETIME : 1410]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : aa2b7cca-848a-49d3-aa50-91c81bc79fb0</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:16 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:47 PM</td>
+					<td class='step-details'>Event Status for correlation ID aa2b7cca-848a-49d3-aa50-91c81bc79fb0 is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:47 PM</td>
+					<td class='step-details'>Retrieving the Status Message from SOAP file :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:59 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id aa2b7cca-848a-49d3-aa50-91c81bc79fb0</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:59 PM</td>
+					<td class='step-details'>Status Message for correlation ID aa2b7cca-848a-49d3-aa50-91c81bc79fb0 is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:59 PM</td>
+					<td class='step-details'><b style="font-size: 15px;color: black;"> Passing CorrelationID for AACC Response Adapter is : aa2b7cca-848a-49d3-aa50-91c81bc79fb0 </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:59 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.RESP.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:59:04 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:59:12 PM</td>
+					<td class='step-details'>Audit file downloaded successfully for AACC Response Adapter</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:59:12 PM</td>
+					<td class='step-details'>Success message retrieved successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:59:12 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>MESSAGE STATUS : </b>FAILED<br><b>Vendor  : </b>NUANCE<br><b>CORRELATION ID : </b>aa2b7cca-848a-49d3-aa50-91c81bc79fb0<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:59:12 PM</td>
+					<td class='step-details'>Retrieving Event Status From Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:59:40 PM</td>
+					<td class='step-details'>Event Status for correlation ID aa2b7cca-848a-49d3-aa50-91c81bc79fb0 is  : <b style="font-size: 15px;color: green;"> FAILED </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:59:40 PM</td>
+					<td class='step-details'>TCFS013 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS014 : Validate NOT_SENT message in DB, after processing a flight delay request from AACC request adapter</span>
+						<span class='test-time'>Nov 23, 2017 12:59:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 12:59:41 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:02:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 21s+364ms</span>
+</div>
+	<div class='test-desc'>Drop a flight delay xml from JMS viewer and validate NOT_SENT message in AACC notification response adapter queue and validate NOT_SENT message in DB </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:59:41 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:59:41 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>L7WMBD<br><b>Action Code : </b>OT<br><b>Responsible Office : </b>DALWN09AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:59:47 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:04 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:04 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:04 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>L7WMBD<br><b>ACTION CODE : </b>OT<br><b>CORRELATION ID : </b>5927ce4a-aced-4c9c-9145-e2196692431a<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511422235785.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511422235785.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511422235785.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ GIVENNAME : SRINI] == Output : [ CONSUMERFNAME : SRINI]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ SURNAME : RAO] == Output : [ CONSUMERLNAME : RAO]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ AIRLINECODE : WN] == Output : [ CODESHARECODE : WN]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : FLL] == Output : [ DEPCITY : FLL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170430] == Output : [ DEPDATE : 20170430]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ RECORDNUMBER : L7WMBD] == Output : [ ID : L7WMBD]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ DEPARTURETIME : 1455] == Output : [ ORGDEPTIME : 1455]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ OFFPOINT : SNU] == Output : [ OFFPOINT : SNU]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Input : [ PREVIOUSDEPARTURETIME : 1410] == Output : [ PREVIOUSDEPARTURETIME : 1410]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : 5927ce4a-aced-4c9c-9145-e2196692431a</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:35 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:01:09 PM</td>
+					<td class='step-details'>Event Status for correlation ID 5927ce4a-aced-4c9c-9145-e2196692431a is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:09 PM</td>
+					<td class='step-details'>Retrieving the Status Message from SOAP file :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:19 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id 5927ce4a-aced-4c9c-9145-e2196692431a</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:01:19 PM</td>
+					<td class='step-details'>Status Message for correlation ID 5927ce4a-aced-4c9c-9145-e2196692431a is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:19 PM</td>
+					<td class='step-details'><b style="font-size: 15px;color: black;"> Passing CorrelationID for AACC Response Adapter is : 5927ce4a-aced-4c9c-9145-e2196692431a </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:19 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.RESP.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:24 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:01:34 PM</td>
+					<td class='step-details'>Audit file downloaded successfully for AACC Response Adapter</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:34 PM</td>
+					<td class='step-details'>Success message retrieved successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:34 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>MESSAGE STATUS : </b>NOT_SENT<br><b>Vendor  : </b>NUANCE<br><b>CORRELATION ID : </b>5927ce4a-aced-4c9c-9145-e2196692431a<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:34 PM</td>
+					<td class='step-details'>Retrieving Event Status From Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:02 PM</td>
+					<td class='step-details'>Event Status for correlation ID 5927ce4a-aced-4c9c-9145-e2196692431a is  : <b style="font-size: 15px;color: green;"> NOT_SENT </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:02 PM</td>
+					<td class='step-details'>TCFS014 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS015 : Process a SODA with action code as NE and office code as DALWN01AA</span>
+						<span class='test-time'>Nov 23, 2017 01:02:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:02:02 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:03:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 14s+694ms</span>
+</div>
+	<div class='test-desc'>After processing a SODA XML with valid details from JMS viewer, Verify the success message status in Audit file and validate both input and output messages from Log Filesmessages,and validate Success message in AACC notification response adapter queue and validate Success message in DB </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:02 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.REQ.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:02 PM</td>
+					<td class='step-details'><b>MESSAGE DETAILS : </b><br><b>PNR : </b>CORU4S<br><b>Action Code : </b>NE<br><b>Responsible Office : </b>DALWN01AA<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:08 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:16 PM</td>
+					<td class='step-details'>Audit files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:16 PM</td>
+					<td class='step-details'>Correlation ID retrieved from audit file.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:16 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>PNR : </b>CORU4S<br><b>ACTION CODE : </b>NE<br><b>CORRELATION ID : </b>dcee558f-4f98-48a7-99df-6aa3c0cc3b9a<br></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>Log files downloaded successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'><a href="./InputMessageXML1511422352599.txt"><span>InputMessageXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'><a href="./LogInputXML1511422352599.txt"><span>LogInputXML</span></a></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'><a href="./LogOutputXML1511422352599.txt"><span>LogOutputXML</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>No Differences in Input and Log Input Xmls.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>Input : [ BOARDPOINT : DAL] == Output : [ DEPCITY : DAL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>Input : [ DEPARTUREDATE : 20170821] == Output : [ DEPDATE : 20170821]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>Input : [ SCENARIO : REDUCEDVISIBILITY] == Output : [ REASONCODE : REDUCEDVISIBILITY]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>Input : [ VALUE : DAL] == Output : [ SODACITY : DAL]</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>All input message values matched with output xml.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>Passing CorrelationID for Nuance Request Processer is : dcee558f-4f98-48a7-99df-6aa3c0cc3b9a</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:32 PM</td>
+					<td class='step-details'>Retrieving the Event Status from Database :</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:42 PM</td>
+					<td class='step-details'>Event Status for correlation ID dcee558f-4f98-48a7-99df-6aa3c0cc3b9a is  : <b style="font-size: 15px;color: green;"> PENDING </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:42 PM</td>
+					<td class='step-details'>Retrieving the Status Message from SOAP file :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:53 PM</td>
+					<td class='step-details'>Reading soap file for corelation Id dcee558f-4f98-48a7-99df-6aa3c0cc3b9a</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:53 PM</td>
+					<td class='step-details'>Status Message for correlation ID dcee558f-4f98-48a7-99df-6aa3c0cc3b9a is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:53 PM</td>
+					<td class='step-details'>Passing CorrelationID for AACC Response Adapter is : dcee558f-4f98-48a7-99df-6aa3c0cc3b9a</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:53 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.NOT.RESP.ADPTR.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:57 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:03:07 PM</td>
+					<td class='step-details'>Audit file downloaded successfully for AACC Response Adapter</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:03:07 PM</td>
+					<td class='step-details'>Success message retrieved successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:03:07 PM</td>
+					<td class='step-details'><b>Correlation Details : </b><br><b>STATUS : </b>SUCCESS<br><b>MESSAGE STATUS : </b>SUCCESS<br><b>Vendor  : </b>NUANCE<br><b>CORRELATION ID : </b>dcee558f-4f98-48a7-99df-6aa3c0cc3b9a<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:03:07 PM</td>
+					<td class='step-details'>Retrieving Event Status From Database</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:03:17 PM</td>
+					<td class='step-details'>Event Status for correlation ID dcee558f-4f98-48a7-99df-6aa3c0cc3b9a is  : <b style="font-size: 15px;color: green;"> SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:03:17 PM</td>
+					<td class='step-details'>TCFS015 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fatal' status='fatal' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS016 : Verify that a record is created in DB with pending status after posting a valid message to fulfilment Processor.</span>
+						<span class='test-time'>Nov 23, 2017 01:03:17 PM</span>
+						<span class='test-status right fatal'>fatal</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:03:17 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:03:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+435ms</span>
+</div>
+	<div class='test-desc'>After dropping a valid message to fulfilment processor, a record is created in DB with status as Pending and a record is created in Audit file with Success status </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:03:17 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.ITIN.FULFILL.PROC.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:03:24 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='fatal'>
+					<td class='status fatal' title='fatal' alt='fatal'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:39 PM</td>
+					<td class='step-details'><details style="color: red;"><summary><b>NO SUCH FILE : ERROR</b></summary>com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2873)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2225)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2242)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:928)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:888)<br>com.swacorp.methods.FtpFileHandler.downloadFtpFile(FtpFileHandler.java:101)<br>com.swacorp.methods.FtpFileHandler.downloadBothIFPAuditFiles(FtpFileHandler.java:392)<br>com.swacorp.validations.Itenirary_FulfilmentProcessorValidation.readIFPAuditFiles(Itenirary_FulfilmentProcessorValidation.java:122)<br>com.swacorp.validations.Itenirary_FulfilmentProcessorValidation.validateIteniraryFullfillmentProcessorPendingStatus(Itenirary_FulfilmentProcessorValidation.java:58)<br>com.swacorp.tests.TCFS016_FULFILL_ItineraryFulfilmentProcessor.validate_IteniraryFullfillmentProcessor(TCFS016_FULFILL_ItineraryFulfilmentProcessor.java:34)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br>org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br>org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br>org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br>org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)<br>org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)<br>org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)<br>org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)<br>org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br>org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br>org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br>org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br>org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br>org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br>org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)<br>org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)<br>org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)<br>org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)<br>org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)<br>sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)<br>org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)<br>com.sun.proxy.$Proxy2.processTestClass(Unknown Source)<br>org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)<br>sun.reflect.GeneratedMethodAccessor61.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)<br>org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br>java.lang.Thread.run(Thread.java:748)<br></details</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:03:39 PM</td>
+					<td class='step-details'>TCFS016 Execution Failed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fatal' status='fatal' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS017 : Verify the success message in Audit file after posting a valid message to fulfilment Processor.</span>
+						<span class='test-time'>Nov 23, 2017 01:03:39 PM</span>
+						<span class='test-status right fatal'>fatal</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:03:39 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:04:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+70ms</span>
+</div>
+	<div class='test-desc'>Need to drop a valid message to Tibco queue and need to validate the success status in Audit file. </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:03:39 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.ITIN.FULFILL.PROC.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:03:45 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='fatal'>
+					<td class='status fatal' title='fatal' alt='fatal'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:04:01 PM</td>
+					<td class='step-details'><details style="color: red;"><summary><b>NO SUCH FILE : ERROR</b></summary>com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2873)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2225)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2242)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:928)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:888)<br>com.swacorp.methods.FtpFileHandler.downloadFtpFile(FtpFileHandler.java:101)<br>com.swacorp.methods.FtpFileHandler.downloadBothIFPAuditFiles(FtpFileHandler.java:392)<br>com.swacorp.validations.Itenirary_FulfilmentProcessorValidation.readIFPAuditFiles(Itenirary_FulfilmentProcessorValidation.java:122)<br>com.swacorp.validations.Itenirary_FulfilmentProcessorValidation.validateIteniraryFullfillmentProcessorSuccessMsg_AuditFile(Itenirary_FulfilmentProcessorValidation.java:98)<br>com.swacorp.tests.TCFS017_FULFILL_ItineraryFullfillmentProcessor_ValidateSuccessMsgInAuditFile.validate_SuccessMsginAuditFile_IteniraryFullfillmentProcessor(TCFS017_FULFILL_ItineraryFullfillmentProcessor_ValidateSuccessMsgInAuditFile.java:34)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br>org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br>org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br>org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br>org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)<br>org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)<br>org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)<br>org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)<br>org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br>org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br>org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br>org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br>org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br>org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br>org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)<br>org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)<br>org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)<br>org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)<br>org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)<br>sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)<br>org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)<br>com.sun.proxy.$Proxy2.processTestClass(Unknown Source)<br>org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)<br>sun.reflect.GeneratedMethodAccessor61.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)<br>org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br>java.lang.Thread.run(Thread.java:748)<br></details</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:04:01 PM</td>
+					<td class='step-details'>TCFS017 Execution Failed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fatal' status='fatal' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS018 : Verify that Pending status record is updated to Success after posting a valid message to fulfilment response Processor</span>
+						<span class='test-time'>Nov 23, 2017 01:04:02 PM</span>
+						<span class='test-status right fatal'>fatal</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:04:02 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:04:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+797ms</span>
+</div>
+	<div class='test-desc'>After dropping a valid message to fulfilment processor, a record is created in DB with status as Pending and a record is created in Audit file with Success status. Then we need to drop a file with status element as Sent to fulfilment response Processor queue and validate the Success message in fulfilment response Processor audit file and DB </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:02 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.ITIN.FULFILL.PROC.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:08 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='fatal'>
+					<td class='status fatal' title='fatal' alt='fatal'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:04:25 PM</td>
+					<td class='step-details'><details style="color: red;"><summary><b>NO SUCH FILE : ERROR</b></summary>com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2873)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2225)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2242)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:928)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:888)<br>com.swacorp.methods.FtpFileHandler.downloadFtpFile(FtpFileHandler.java:101)<br>com.swacorp.methods.FtpFileHandler.downloadBothIFPAuditFiles(FtpFileHandler.java:392)<br>com.swacorp.validations.Itenirary_FulfilmentProcessorValidation.readIFPAuditFiles(Itenirary_FulfilmentProcessorValidation.java:122)<br>com.swacorp.validations.Itenirary_FulfilmentProcessorValidation.validateIteniraryFullfillmentProcessorPendingStatus(Itenirary_FulfilmentProcessorValidation.java:58)<br>com.swacorp.validations.Itenirary_FulfillmentResponseProcessorValidation.validateFulfillmentResponseProcessorForSentStatus(Itenirary_FulfillmentResponseProcessorValidation.java:63)<br>com.swacorp.tests.TCFS018_FULFILL_ItineraryFulfillmentResponseProcessor_WithSentMessageStatus.validateFulfillmentResponseProcessor(TCFS018_FULFILL_ItineraryFulfillmentResponseProcessor_WithSentMessageStatus.java:38)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br>org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br>org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br>org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br>org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)<br>org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)<br>org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)<br>org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)<br>org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br>org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br>org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br>org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br>org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br>org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br>org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)<br>org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)<br>org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)<br>org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)<br>org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)<br>sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)<br>org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)<br>com.sun.proxy.$Proxy2.processTestClass(Unknown Source)<br>org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)<br>sun.reflect.GeneratedMethodAccessor61.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)<br>org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br>java.lang.Thread.run(Thread.java:748)<br></details</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:04:25 PM</td>
+					<td class='step-details'>TCFS018 Execution Failed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fatal' status='fatal' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS019 : Verify that Pending status record is updated to Failed after posting a valid message to fulfilment response Processor</span>
+						<span class='test-time'>Nov 23, 2017 01:04:25 PM</span>
+						<span class='test-status right fatal'>fatal</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:04:25 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:04:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+24ms</span>
+</div>
+	<div class='test-desc'>After dropping a valid message to fulfilment processor, a record is created in DB with status as Pending and a record is created in Audit file with Success status. Then we need to drop a file with status element as Failed to fulfilment response Processor queue and validate the Failed message in fulfilment response Processor audit file and DB </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:25 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.ITIN.FULFILL.PROC.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:34 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='fatal'>
+					<td class='status fatal' title='fatal' alt='fatal'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:04:48 PM</td>
+					<td class='step-details'><details style="color: red;"><summary><b>NO SUCH FILE : ERROR</b></summary>com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2873)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2225)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2242)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:928)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:888)<br>com.swacorp.methods.FtpFileHandler.downloadFtpFile(FtpFileHandler.java:101)<br>com.swacorp.methods.FtpFileHandler.downloadBothIFPAuditFiles(FtpFileHandler.java:392)<br>com.swacorp.validations.Itenirary_FulfilmentProcessorValidation.readIFPAuditFiles(Itenirary_FulfilmentProcessorValidation.java:122)<br>com.swacorp.validations.Itenirary_FulfilmentProcessorValidation.validateIteniraryFullfillmentProcessorPendingStatus(Itenirary_FulfilmentProcessorValidation.java:58)<br>com.swacorp.validations.Itenirary_FulfillmentResponseProcessorValidation.validateFulfillmentResponseProcessorForFailedStatus(Itenirary_FulfillmentResponseProcessorValidation.java:103)<br>com.swacorp.tests.TCFS019_FULFILL_ItineraryFulfillmentResponseProcessor_WithFailedMessageStatus.validateFulfillmentResponseProcessor(TCFS019_FULFILL_ItineraryFulfillmentResponseProcessor_WithFailedMessageStatus.java:36)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br>org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br>org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br>org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br>org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)<br>org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)<br>org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)<br>org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)<br>org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br>org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br>org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br>org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br>org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br>org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br>org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)<br>org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)<br>org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)<br>org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)<br>org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)<br>sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)<br>org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)<br>com.sun.proxy.$Proxy2.processTestClass(Unknown Source)<br>org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)<br>sun.reflect.GeneratedMethodAccessor61.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)<br>org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br>java.lang.Thread.run(Thread.java:748)<br></details</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:04:48 PM</td>
+					<td class='step-details'>TCFS019 Execution Failed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS020 : Verify data is retrived successfully when correct start and end date are provided in the URL</span>
+						<span class='test-time'>Nov 23, 2017 01:04:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:04:49 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:04:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+678ms</span>
+</div>
+	<div class='test-desc'>Run the URL with valid start and end date, and validate that correct response is received </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:54 PM</td>
+					<td class='step-details'>Passing parameters to the URL : https://ccs.itest1.swacorp.com/v1/ccs-fulfillment-status/events?startDate=2017-06-10&endDate=2017-06-22&status=SUCCESS</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:54 PM</td>
+					<td class='step-details'><b>Parameters : </b><br><b>Status : </b>SUCCESS<br><b>Start Date : </b>2017-06-10<br><b>End Date : </b>2017-06-22<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:54 PM</td>
+					<td class='step-details'>Response details for Fulfillment status with input parameter as Start date End date & Status :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:54 PM</td>
+					<td class='step-details'><a href="./FulfillmentStatusStartDateEndDateResponse1511422494735.txt"><span>FulfillmentStatusStartDateEndDateResponse</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:54 PM</td>
+					<td class='step-details'>Response status retrieved successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:54 PM</td>
+					<td class='step-details'><b style="font-size: 15px;color: black;"> Status : SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:54 PM</td>
+					<td class='step-details'>TCFS020 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS021 : Verify data is retrived successfully when correct PNR value is provided in the URL</span>
+						<span class='test-time'>Nov 23, 2017 01:04:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:04:54 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:04:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+451ms</span>
+</div>
+	<div class='test-desc'>Run the URL with valid PNR number, and validate that correct response is received </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:59 PM</td>
+					<td class='step-details'>Passing parameter to the URL : https://ccs.itest1.swacorp.com/v1/ccs-fulfillment-status/documents?pnr=TNR125</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:59 PM</td>
+					<td class='step-details'><b>Parameters : </b><br><b>PNR : </b>TNR125<br></td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:59 PM</td>
+					<td class='step-details'>Response details for Fulfillment status with input parameter as PNR :</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:59 PM</td>
+					<td class='step-details'><a href="./FulfillmentStatusPNRResponse1511422499280.txt"><span>FulfillmentStatusPNRResponse</span></a></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:59 PM</td>
+					<td class='step-details'>Response status retrieved successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:59 PM</td>
+					<td class='step-details'><b style="font-size: 15px;color: black;"> Status : SUCCESS </b></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:59 PM</td>
+					<td class='step-details'>TCFS021 Executed Successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fatal' status='fatal' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS022 : Verify the success message in Audit file after posting a valid message to fulfilment Adapter</span>
+						<span class='test-time'>Nov 23, 2017 01:04:59 PM</span>
+						<span class='test-status right fatal'>fatal</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:04:59 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:05:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 48s+281ms</span>
+</div>
+	<div class='test-desc'>We need to drop a valid message to Tibco queue and need to validate the success status in Audit file </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:04:59 PM</td>
+					<td class='step-details'>Posting Message to Queue : CCS.COMM.FEED.FULFILLMENT</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:05:31 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:05:31 PM</td>
+					<td class='step-details'><b>PNR Details : </b><br><b>PNR : </b>JB2KSU<br></td>
+				</tr>
+				<tr class='log' status='fatal'>
+					<td class='status fatal' title='fatal' alt='fatal'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:05:47 PM</td>
+					<td class='step-details'><details style="color: red;"><summary><b>NO SUCH FILE : ERROR</b></summary>com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2873)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2225)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2242)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:928)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:888)<br>com.swacorp.methods.FtpFileHandler.downloadFtpFile(FtpFileHandler.java:101)<br>com.swacorp.methods.FtpFileHandler.downloadBothFAAuditFiles(FtpFileHandler.java:420)<br>com.swacorp.validations.FulfillmentAdapterValidation.readFulfillmentAdapterAuditFiles(FulfillmentAdapterValidation.java:90)<br>com.swacorp.validations.FulfillmentAdapterValidation.validateSuccessMessageInFulfillmentAdapter(FulfillmentAdapterValidation.java:68)<br>com.swacorp.tests.TCFS022_FULFILL_FulfillmentAdapterSuccessMessage.validateFulfillmentAdapter(TCFS022_FULFILL_FulfillmentAdapterSuccessMessage.java:33)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br>org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br>org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br>org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br>org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)<br>org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)<br>org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)<br>org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)<br>org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br>org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br>org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br>org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br>org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br>org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br>org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)<br>org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)<br>org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)<br>org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)<br>org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)<br>sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)<br>org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)<br>com.sun.proxy.$Proxy2.processTestClass(Unknown Source)<br>org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)<br>sun.reflect.GeneratedMethodAccessor61.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)<br>org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br>java.lang.Thread.run(Thread.java:748)<br></details</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:05:47 PM</td>
+					<td class='step-details'>TCFS022 Execution Failed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fatal' status='fatal' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>TCFS023 : Verify Success message in Adobe_Request_Processor_Audit_log after placing a valid file in adobe request processor queue</span>
+						<span class='test-time'>Nov 23, 2017 01:05:47 PM</span>
+						<span class='test-status right fatal'>fatal</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 23, 2017 01:05:47 PM</span>
+	<span class='label end-time'>Nov 23, 2017 01:06:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+457ms</span>
+</div>
+	<div class='test-desc'>After dropping a valid message in Adobe request processor, we get success status in audit file for our message and a record is created in DB with pending status </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:05:47 PM</td>
+					<td class='step-details'>Posting Message to Queue : Queue[CCS.AACC.ADOBE.REQ.PROC.INPUT.BRIDGE.QUEUE]</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:05:58 PM</td>
+					<td class='step-details'>Message posted successfully.</td>
+				</tr>
+				<tr class='log' status='fatal'>
+					<td class='status fatal' title='fatal' alt='fatal'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:06:12 PM</td>
+					<td class='step-details'><details style="color: red;"><summary><b>NO SUCH FILE : ERROR</b></summary>com.jcraft.jsch.ChannelSftp.throwStatusError(ChannelSftp.java:2873)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2225)<br>com.jcraft.jsch.ChannelSftp._stat(ChannelSftp.java:2242)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:928)<br>com.jcraft.jsch.ChannelSftp.get(ChannelSftp.java:888)<br>com.swacorp.methods.FtpFileHandler.downloadFtpFile(FtpFileHandler.java:101)<br>com.swacorp.methods.FtpFileHandler.downloadBothAuditFilesForARP(FtpFileHandler.java:448)<br>com.swacorp.validations.AACC_AdobeRequestProcessorValidation.readAuditFilesForAdobeRequestProcessor(AACC_AdobeRequestProcessorValidation.java:97)<br>com.swacorp.validations.AACC_AdobeRequestProcessorValidation.validateSuccessMessageForAdobeRequestProcessor(AACC_AdobeRequestProcessorValidation.java:76)<br>com.swacorp.tests.TCFS023_AACC_AdobeRequestProcessor.validateFulfillmentAdapter(TCFS023_AACC_AdobeRequestProcessor.java:33)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br>org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br>org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br>org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br>org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)<br>org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)<br>org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)<br>org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)<br>org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br>org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br>org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br>org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br>org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br>org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br>org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)<br>org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)<br>org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)<br>org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br>org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)<br>org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)<br>org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)<br>sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)<br>org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)<br>com.sun.proxy.$Proxy2.processTestClass(Unknown Source)<br>org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)<br>sun.reflect.GeneratedMethodAccessor61.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)<br>org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)<br>org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)<br>org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br>java.lang.Thread.run(Thread.java:748)<br></details</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:06:12 PM</td>
+					<td class='step-details'>TCFS023 Execution Failed.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>23</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>411</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Nov 23, 2017 12:24:24 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Nov 23, 2017 01:06:12 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>2,507,428ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 17,
+				failParent: 0,
+				fatalParent: 6,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 6,
+				
+				passChild: 182,
+				failChild: 6,
+				fatalChild: 6,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 217,
+				exceptionsChild: 12,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

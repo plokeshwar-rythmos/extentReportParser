@@ -1,0 +1,24 @@
+group 'DailyReportLoader'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java-library'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+	mavenCentral()
+	
+}
+
+dependencies {
+	// This dependency is exported to consumers, that is to say found on their compile classpath.
+	compile group: 'com.aventstack', name: 'extentreports', version: '3.0.7'
+	compile group: 'org.testng', name: 'testng', version: '6.11'
+	
+}
+
+test {
+	useTestNG() {
+		// runlist to executed. path is relative to current folder
+		suites 'src/test/resources/execute.xml'
+	}
+}
